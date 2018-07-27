@@ -1,0 +1,25 @@
+namespace org.county.government
+
+participant Citizen identified by SSN {
+  o String		SSN
+  o String		firstName
+  o String 		lastName
+  o Double      walletBalance
+}
+
+asset Land identified by APN {
+  o String 		APN
+  --> Citizen 	Owner
+}
+
+asset SaleContract identified by SaleID {
+  o String		SaleID
+  --> Land      Land
+  --> Citizen   Seller
+  --> Citizen   Buyer
+  o Double      Price
+}
+
+transaction Sale {
+  --> SaleContract SaleContract
+}
