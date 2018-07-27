@@ -1,1 +1,3 @@
-This is the readme file for the Business Network Definition created in Playground
+# Land Ownership Tracking
+
+Allows a government agency to track land ownership and sale transactions. For use with the Composer Playground and the Composer REST Server.
